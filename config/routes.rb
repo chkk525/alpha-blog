@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about' => 'pages#about'
 
+  # gave us path to create,load, update, destroy articles
+  resources :articles
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

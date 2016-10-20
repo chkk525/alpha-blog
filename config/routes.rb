@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   # gave us path to create,load, update, destroy articles
   resources :articles
   
+  get 'signup' => 'users#new'
+  resources :users, except: [:new]
+  # post 'users' => 'users#create'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
